@@ -1,0 +1,232 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Righteous";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.sect {
+  background: none;
+}
+
+.button {
+  background: none;
+  /*border: 4px solid #290a0a;*/
+  border: none;
+}
+
+/* Main Objects */
+
+#bNoteMainD {
+  border: 4px solid #675b5b;
+  position: absolute;
+  left: 0px;
+  top: 177px;
+  width: 380px;
+  height: 513px;
+}
+
+#bNote {
+  position: absolute;
+  left: 55px;
+  top: 90px;
+}
+
+#bNote:hover:active {
+  scale: 96%;
+}
+
+#bNote:!hover:!active {
+  scale: 100%;
+}
+
+#tNoteGainPart {
+  position: absolute;
+  visibility: hidden;
+  font-size: 20px;
+  z-index: 99;
+}
+
+#nInfoMainD {
+  border: 4px solid #000000;
+  width: 380px;
+  height: 80px;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+#pSelectD {
+  border: 4px solid #000000;
+  width: 320px;
+  height: 601px;
+  position: absolute;
+  left: 914px;
+  top: 90px;
+}
+
+.bPAll {
+  position: absolute;
+}
+
+#bPShop,
+#bPUpgrades {
+  top: 30px;
+}
+
+#bPAchievements {
+  top: 300px;
+}
+
+#bPStats,
+#bPSettings {
+  top: 450px;
+}
+
+#bPShop,
+#bPStats {
+  left: 30px
+}
+
+#bPUpgrades,
+#bPSettings,
+#bPAchievements {
+  right: 30px
+}
+
+.page {
+  border: 4px solid #5e2c2c;
+  height: 464px;
+  width: 520px;
+  position: absolute;
+  left: 387px;
+  top: 227px;
+}
+
+.sAll {
+  position: absolute;
+}
+
+.sRow1 {
+  top: 30px;
+}
+
+#sPencil {
+  left: 10px;
+}
+
+#sPen {
+  left: 110px;
+}
+
+#sWorker {
+  left: 216px;
+}
+
+#sTypewriter {
+  right: 110px;
+}
+
+#sKeyboard {
+  right: 10px;
+}
+
+#signD {
+  border: 4px solid #675b5b;
+  width: 520px;
+  height: 130px;
+  position: absolute;
+  left: 387px;
+  top: 90px;
+}
+
+.allSign {
+  position: absolute;
+  top: 0px;
+}
+
+#shopSign {
+  left: 144px;
+  visibility: visible;
+}
+
+#upgradesSign {
+  left: 120px;
+  visibility: hidden;
+}
+
+#settingsSign {
+  /* Dont use sign */
+  left: 100px;
+  visibility: hidden;
+}
+
+#statsSign {
+  /* Dont use sign */
+  left: 100px;
+  visibility: hidden;
+}
+
+#achievementsSign {
+  left: 56px;
+  visibility: hidden;
+}
+
+#infoDisplayD {
+  border: 4px solid #343232;
+  position: absolute;
+  height: 83px;
+  width: 907px;
+  left: 0px;
+  top: 0px;
+}
+
+.infoAllT {
+  /* maybe make the div hidden */
+  position: absolute;
+  visibility: hidden;
+}
+
+#infoNameT {
+  font-size: 3cap;
+  left: 20px;
+}
+
+#infoStockT {
+  font-size: 20px;
+  left: 40px;
+  top: 38px;
+}
+
+#infoPriceT {
+  font-size: 20px;
+  left: 40px;
+  top: 58px;
+}
+
+#infoBuffT {
+  font-size: 20px;
+  left: 400px;
+  top: 10px;
+}
+
+#infoTotalBuffT {
+  font-size: 20px;
+  left: 400px;
+  top: 50px;
+}

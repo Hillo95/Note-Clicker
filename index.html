@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NoteClickerReRun</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="all">
+    <!-- Main Objects -->
+
+    <div id="bNoteMainD" class="mainObject sect">
+      <button id="bNote" onclick="NoteOnClick()" class="button">
+        <img src="https://art.pixilart.com/sr23b15d677efc2.png" alt="bNote" height="250px">
+      </button>
+      <h6 id="tNoteGainPart">null</h6>
+    </div>
+
+    <div id="nInfoMainD" class="mainObject sect">
+      <h1 id="nCounterT">Notes: 0</h1>
+      <h3 id="nsCounterT">Notes Per Second: 0</h3>
+    </div>
+
+    <!-- Page Selecters -->
+
+    <div id=pSelectD class="mainObject sect">
+
+
+      <button id="bPShop" onclick="PageSwitch('shop')" class="button bPAll">
+        <img src="https://art.pixilart.com/sr229c95dc600cc.png" alt="bPShop" height="100px">
+      </button>
+
+      <button id="bPUpgrades" onclick="PageSwitch('upgrades')" class="button bPAll">
+        <img src="https://art.pixilart.com/sr25b10f293dc3a.png" alt="bPUpgrades" height="100px">
+      </button>
+
+      <button id="bPSettings" onclick="PageSwitch('settings')" class="button bPAll">
+        <img src="https://art.pixilart.com/sr2b6acfce8d9a2.png" alt="bPSettings" height="100px">
+      </button>
+
+      <button id="bPStats" onclick="PageSwitch('stats')" class="button bPAll">
+        <img src="https://art.pixilart.com/sr2ece3e6228d5f.png" alt="bPStats" height="100px">
+      </button>
+
+      <button id="bPAchievements" onclick="PageSwitch('achievements')" class="button bPAll">
+        <img src="https://art.pixilart.com/sr27556d9479e8c.png" alt="bPAchievements" height="100px">
+      </button>
+
+
+    </div>
+
+    <!-- Shop -->
+
+    <div id="pShopD" class="page sect">
+
+
+      <button id="sPencil" class="button sAll sRow1" onclick="BuyItem('pencil')">
+        <img src="https://art.pixilart.com/sr248188b54eafe.png" alt="sPencil" height="70px"
+          onmouseenter="setShopItemInfo('pencil')" onmouseleave="hideInfo()">
+      </button>
+
+      <button id="sPen" class="button sAll sRow1" onclick="BuyItem('pen')">
+        <img src="https://art.pixilart.com/sr21cb35f984a7f.png" alt="sPen" height="70px"
+          onmouseenter="setShopItemInfo('pen')" onmouseleave="hideInfo()">
+      </button>
+
+      <button id="sWorker" class="button sAll sRow1" onclick="BuyItem('worker')">
+        <img src="https://art.pixilart.com/sr255914de0e5d0.png" alt="sWorker" height="70px"
+          onmouseenter="setShopItemInfo('worker')" onmouseleave="hideInfo()">
+      </button>
+
+      <button id="sTypewriter" class="button sAll sRow1" onclick="BuyItem('typewriter')">
+        <img src="https://art.pixilart.com/sr2390d51fc71d0.png" alt="sTypewriter" height="70px"
+          onmouseenter="setShopItemInfo('typewriter')" onmouseleave="hideInfo()">
+      </button>
+
+      <button id="sKeyboard" class="button sAll sRow1" onclick="BuyItem('keyboard')">
+        <img src="https://art.pixilart.com/sr2f5f27ef71673.png" alt="sKeyboard" height="70px"
+          onmouseenter="setShopItemInfo('keyboard')" onmouseleave="hideInfo()">
+      </button>
+
+
+    </div>
+
+    <!-- Signs -->
+
+    <div id="signD" class="sect">
+
+      <img src="https://art.pixilart.com/sr22c4502be7410.png" id="shopSign" class="allSign" alt="shopSign"
+        height="124px">
+      <img src="https://art.pixilart.com/sr21467e1f77dfa.png" id="upgradesSign" class="allSign" alt="upgradesSign"
+        height="124px">
+      <img src="" id="settingsSign" class="allSign" alt="settingsSign" height="124px">
+      <img src="" id="statsSign" class="allSign" alt="statsSign" height="124px">
+      <img src="https://art.pixilart.com/sr2bd52b556573f.png" id="achievementsSign" class="allSign"
+        alt="achievementsSign" height="124px">
+
+    </div>
+
+    <!-- Info Display Section -->
+
+    <div id="infoDisplayD" class="mainObject sect">
+      <h3 id="infoNameT" class="infoAllT">Name Here</h3>
+      <h3 id="infoPriceT" class="infoAllT">Price Here</h3>
+      <h3 id="infoStockT" class="infoAllT">Stock Here</h3>
+      <h3 id="infoBuffT" class="infoAllT">Buff Here</h3>
+      <h3 id="infoTotalBuffT" class="infoAllT">Total Buff Here</h3>
+    </div>
+
+  </div>
+
+  <script src="setup.js"></script>
+  <script src="shop.js"></script>
+</body>
+
+</html>

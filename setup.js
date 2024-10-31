@@ -1,0 +1,154 @@
+// Variables
+
+var n = {
+  c: 0,
+  ps: 0,
+  pc: 1,
+  psm: { main: 100, temp: 0, base: 100 },
+  pcm: { main: 100, temp: 0, base: 100 },
+  m: { main: 100, temp: 0, base: 100 },
+  t: 0
+};
+
+var noteClickStack = 0;
+
+var page = "shop"
+
+//shop setup ----fix later maybe (move to shop.js)
+
+
+var shop = {
+  pencil: {
+    cost: 15,
+    baseCost: 15,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 0.1, temp: 0, base: 0.1 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Pencil"
+  },
+  pen: {
+    cost: 150,
+    baseCost: 150,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 1, temp: 0, base: 1 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Pen"
+  },
+  worker: {
+    cost: 4000,
+    baseCost: 4000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 14, temp: 0, base: 14 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Worker"
+  },
+  typewriter: {
+    cost: 90000,
+    baseCost: 90000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 110, temp: 0, base: 110 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Typewriter"
+  },
+  keyboard: {
+    cost: 3000000,
+    baseCost: 3000000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 900, temp: 0, base: 900 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Keyboard"
+  }
+}
+
+var shopLevel = 0;
+
+
+function hideInfo() { //turn off for testing
+  $(".infoAllT").css("visibility", "hidden"); 
+}
+
+function UpdateAll() {
+  n.c = (Math.round(n.c * 100)) / 100;  //fixing js decimals
+  n.t = (Math.round(n.t * 100)) / 100;
+
+  n.psm.main = n.psm.base + n.psm.temp;
+  n.pcm.main = n.pcm.base + n.pcm.temp;
+  n.m.main = n.m.base + n.m.temp;
+
+  n.ps = (shop.pencil.pst + shop.pen.pst + shop.worker.pst + shop.typewriter.pst + shop.keyboard.pst)
+  n.ps = (Math.round(n.ps * 100)) / 100; //more fixing
+
+  $("#nCounterT").text(`Notes: ${abbr(Math.round(n.c))}`);
+  $("#nsCounterT").text(`Notes Per Second: ${abbr(n.ps)}`);
+}
+
+function NoteOnClick() {
+  noteClickStack++;
+  
+  n.c += n.pc * (n.pcm.main / 100) * (n.m.main / 100);
+  n.t += n.pc * (n.pcm.main / 100) * (n.m.main / 100);
+  UpdateAll();
+
+  $("#tNoteGainPart").text(`+${abbr(n.pc)}`);
+  $("#tNoteGainPart").css("left",`${Math.floor(Math.random()*361)+5}px`);
+  $("#tNoteGainPart").css("top",`${Math.floor(Math.random()*394)+5}px`);
+  $("#tNoteGainPart").css("visibility","visible");
+  setTimeout(function(){
+    if (noteClickStack == 1) $("#tNoteGainPart").css("visibility","hidden")
+    noteClickStack--;
+  },800)
+}  // Use Note Click Stack To Make Changing The Text More Efficient If Possible
+
+function abbr(i) {  
+  let c;
+  let l = String(i).length;
+  if (l > 3) {
+    
+    if (l < 7) { c = `${(Math.floor((i/10**3)*10)/10)}K`; }
+    else if (l < 10) { c = `${(Math.floor((i/10**6)*10)/10)}M`; }
+    else if (l < 13) { c = `${(Math.floor((i/10**9)*10)/10)}B`; }
+    else if (l < 16) { c = `${(Math.floor((i/10**12)*10)/10)}T`; }
+    else if (l < 19) { c = `${(Math.floor((i/10**15)*10)/10)}Qd`; }
+    else if (l < 22) { c = `${(Math.floor((i/10**18)*10)/10)}Qn`; }
+    else if (l < 25) { c = `${(Math.floor((i/10**21)*10)/10)}Sx`; }
+    else if (l < 28) { c = `${(Math.floor((i/10**24)*10)/10)}Sp`; }
+    else if (l < 31) { c = `${(Math.floor((i/10**27)*10)/10)}Oc`; }
+    else { c = "toomuch"; }
+    
+  } else { return(i); }
+  
+  return(c);
+}
+
+// Main Loop
+
+function MainLoop() {
+  n.c += n.ps * (n.psm.main / 100) * (n.m.main / 100);
+  n.t += n.ps * (n.psm.main / 100) * (n.m.main / 100);
+  UpdateAll();
+}
+
+
+UpdateAll();
+
+setInterval(MainLoop, 1000);
