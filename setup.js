@@ -14,6 +14,8 @@ var noteClickStack = 0;
 
 var page = "shop"
 
+var uptime = 0;
+
 //shop setup ----fix later maybe (move to shop.js)
 
 
@@ -78,13 +80,13 @@ var shop = {
     power: 1,
     displayName: "Keyboard"
   }
-}
+};
 
 var shopLevel = 0;
 
 
 function hideInfo() { //turn off for testing
-  $(".infoAllT").css("visibility", "hidden"); 
+  $(".infoAllT").css("visibility", "hidden");
 }
 
 function UpdateAll() {
@@ -104,41 +106,73 @@ function UpdateAll() {
 
 function NoteOnClick() {
   noteClickStack++;
-  
+
   n.c += n.pc * (n.pcm.main / 100) * (n.m.main / 100);
   n.t += n.pc * (n.pcm.main / 100) * (n.m.main / 100);
   UpdateAll();
 
   $("#tNoteGainPart").text(`+${abbr(n.pc)}`);
-  $("#tNoteGainPart").css("left",`${Math.floor(Math.random()*361)+5}px`);
-  $("#tNoteGainPart").css("top",`${Math.floor(Math.random()*394)+5}px`);
-  $("#tNoteGainPart").css("visibility","visible");
-  setTimeout(function(){
-    if (noteClickStack == 1) $("#tNoteGainPart").css("visibility","hidden")
+  $("#tNoteGainPart").css("left", `${Math.floor(Math.random() * 361) + 5}px`);
+  $("#tNoteGainPart").css("top", `${Math.floor(Math.random() * 394) + 5}px`);
+  $("#tNoteGainPart").css("visibility", "visible");
+  setTimeout(function() {
+    if (noteClickStack == 1) $("#tNoteGainPart").css("visibility", "hidden")
     noteClickStack--;
-  },800)
+  }, 800)
 }  // Use Note Click Stack To Make Changing The Text More Efficient If Possible
 
-function abbr(i) {  
+function abbr(i) {
   let c;
   let l = String(i).length;
   if (l > 3) {
-    
-    if (l < 7) { c = `${(Math.floor((i/10**3)*10)/10)}K`; }
-    else if (l < 10) { c = `${(Math.floor((i/10**6)*10)/10)}M`; }
-    else if (l < 13) { c = `${(Math.floor((i/10**9)*10)/10)}B`; }
-    else if (l < 16) { c = `${(Math.floor((i/10**12)*10)/10)}T`; }
-    else if (l < 19) { c = `${(Math.floor((i/10**15)*10)/10)}Qd`; }
-    else if (l < 22) { c = `${(Math.floor((i/10**18)*10)/10)}Qn`; }
-    else if (l < 25) { c = `${(Math.floor((i/10**21)*10)/10)}Sx`; }
-    else if (l < 28) { c = `${(Math.floor((i/10**24)*10)/10)}Sp`; }
-    else if (l < 31) { c = `${(Math.floor((i/10**27)*10)/10)}Oc`; }
+
+    if (l < 7) { c = `${(Math.floor((i / 10 ** 3) * 10) / 10)}K`; }
+    else if (l < 10) { c = `${(Math.floor((i / 10 ** 6) * 10) / 10)}M`; }
+    else if (l < 13) { c = `${(Math.floor((i / 10 ** 9) * 10) / 10)}B`; }
+    else if (l < 16) { c = `${(Math.floor((i / 10 ** 12) * 10) / 10)}T`; }
+    else if (l < 19) { c = `${(Math.floor((i / 10 ** 15) * 10) / 10)}Qd`; }
+    else if (l < 22) { c = `${(Math.floor((i / 10 ** 18) * 10) / 10)}Qn`; }
+    else if (l < 25) { c = `${(Math.floor((i / 10 ** 21) * 10) / 10)}Sx`; }
+    else if (l < 28) { c = `${(Math.floor((i / 10 ** 24) * 10) / 10)}Sp`; }
+    else if (l < 31) { c = `${(Math.floor((i / 10 ** 27) * 10) / 10)}Oc`; }
     else { c = "toomuch"; }
-    
-  } else { return(i); }
-  
-  return(c);
+
+  } else { return (i); }
+
+  return (c);
 }
+
+// Page Switch
+
+function PageHide(tohide) {
+  switch (tohide) {
+    case "shop":
+      $("#pShopD").css("visibility", "hidden");
+      break;
+    case "settings":
+      $("#pSettingsD").css("visibility", "hidden");
+      break;
+    default:
+      break;
+  }
+}
+
+function PageSwitch(topage) {
+  switch (topage) {
+    case "shop":
+      PageHide("settings");
+      $("#pShopD").css("visibility","visible");
+      break;
+    case "settings":
+      PageHide("shop");
+      $("#pSettingsD").css("visibility","visible");
+      break;
+    default:
+      break;
+  }
+}
+
+PageSwitch("shop");
 
 // Main Loop
 
@@ -146,6 +180,8 @@ function MainLoop() {
   n.c += n.ps * (n.psm.main / 100) * (n.m.main / 100);
   n.t += n.ps * (n.psm.main / 100) * (n.m.main / 100);
   UpdateAll();
+  uptime++;
+  if (uptime % 10 == 0) { SaveData(); }
 }
 
 
