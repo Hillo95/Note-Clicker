@@ -126,23 +126,27 @@ h6 {
   top: 30px;
 }
 
-#sPencil {
+.sRow1 {
+  top: 80px;
+}
+
+#sPencil, #sPrinter {
   left: 10px;
 }
 
-#sPen {
+#sPen, #sMoneyPrinter {
   left: 110px;
 }
 
-#sWorker {
+#sWorker, #sLaminator {
   left: 216px;
 }
 
-#sTypewriter {
+#sTypewriter, #sTypingRobot {
   right: 110px;
 }
 
-#sKeyboard {
+#sKeyboard, #sPaperMill {
   right: 10px;
 }
 
