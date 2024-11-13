@@ -100,17 +100,23 @@ function UpdateAll() {
   n.ps = (shop.pencil.pst + shop.pen.pst + shop.worker.pst + shop.typewriter.pst + shop.keyboard.pst)
   n.ps = (Math.round(n.ps * 100)) / 100; //more fixing
 
-  $("#nCounterT").text(`Notes: ${abbr(Math.round(n.c))}`);
-  $("#nsCounterT").text(`Notes Per Second: ${abbr(n.ps)}`);
+  try {
+    $("#nCounterT").text(`Notes: ${abbr(Math.round(n.c))}`);
+    $("#nsCounterT").text(`Notes Per Second: ${abbr(n.ps)}`);
+  } catch {
+    alert("didnt update text");
+  }
 }
 
 function NoteOnClick() {
+  alert("noteclicked" + n.c);
   noteClickStack++;
 
   n.c += n.pc * (n.pcm.main / 100) * (n.m.main / 100);
   n.t += n.pc * (n.pcm.main / 100) * (n.m.main / 100);
+  alert("before updateall" + n.c);
   UpdateAll();
-
+  alert("after updateall" + n.c);
   $("#tNoteGainPart").text(`+${abbr(n.pc)}`);
   $("#tNoteGainPart").css({
     left: `${Math.floor(Math.random() * 361) + 5}px`,
