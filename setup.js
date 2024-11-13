@@ -100,8 +100,8 @@ function UpdateAll() {
   n.ps = (shop.pencil.pst + shop.pen.pst + shop.worker.pst + shop.typewriter.pst + shop.keyboard.pst)
   n.ps = (Math.round(n.ps * 100)) / 100; //more fixing
 
-  $("#nCounterT").html(`Notes: ${abbr(Math.round(n.c))}`);
-  $("#nsCounterT").html(`Notes Per Second: ${abbr(n.ps)}`);
+  $("#nCounterT").text(`Notes: ${abbr(Math.round(n.c))}`);
+  $("#nsCounterT").text(`Notes Per Second: ${abbr(n.ps)}`);
 }
 
 function NoteOnClick() {
@@ -111,7 +111,7 @@ function NoteOnClick() {
   n.t += n.pc * (n.pcm.main / 100) * (n.m.main / 100);
   UpdateAll();
 
-  $("#tNoteGainPart").html(`+${abbr(n.pc)}`);
+  $("#tNoteGainPart").text(`+${abbr(n.pc)}`);
   $("#tNoteGainPart").css("left", `${Math.floor(Math.random() * 361) + 5}px`);
   $("#tNoteGainPart").css("top", `${Math.floor(Math.random() * 394) + 5}px`);
   $("#tNoteGainPart").css("visibility", "visible");
