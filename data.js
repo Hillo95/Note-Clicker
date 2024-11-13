@@ -8,8 +8,8 @@ function SaveData() {
 function LoadData() {
   n = JSON.parse(localStorage.getItem("n"));
   shop = JSON.parse(localStorage.getItem("shop"));
-  shopLevel = toNumber(localStorage.getItem("shopLevel"));
-  uptime = toNumber(localStorage.getItem("uptime"));
+  shopLevel = Number(localStorage.getItem("shopLevel"));
+  uptime = Number(localStorage.getItem("uptime"));
 }
 
 function ResetData() {
