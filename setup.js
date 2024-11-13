@@ -112,9 +112,11 @@ function NoteOnClick() {
   UpdateAll();
 
   $("#tNoteGainPart").text(`+${abbr(n.pc)}`);
-  $("#tNoteGainPart").css("left", `${Math.floor(Math.random() * 361) + 5}px`);
-  $("#tNoteGainPart").css("top", `${Math.floor(Math.random() * 394) + 5}px`);
-  $("#tNoteGainPart").css("visibility", "visible");
+  $("#tNoteGainPart").css({
+    left: `${Math.floor(Math.random() * 361) + 5}px`,
+    top: `${Math.floor(Math.random() * 394) + 5}px`,
+    visibility: "visible"
+  });
   setTimeout(function() {
     if (noteClickStack == 1) $("#tNoteGainPart").css("visibility", "hidden")
     noteClickStack--;
