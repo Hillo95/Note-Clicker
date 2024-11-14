@@ -81,8 +81,8 @@ var shop = {
     displayName: "Keyboard"
   },
   printer: {
-    cost: 15,
-    baseCost: 15,
+    cost: 9000000000,
+    baseCost: 9000000000,
     costMultiplier: 1.15,
     owned: 0,
     sold: 0,
@@ -93,7 +93,7 @@ var shop = {
     displayName: "Printer"
   },
   moneyPrinter: {
-    cost: 150,
+    cost: 1000000000000,
     baseCost: 150,
     costMultiplier: 1.15,
     owned: 0,
@@ -105,8 +105,8 @@ var shop = {
     displayName: "Money Printer"
   },
   laminator: {
-    cost: 4000,
-    baseCost: 4000,
+    cost: 400000000000000,
+    baseCost: 400000000000000,
     costMultiplier: 1.15,
     owned: 0,
     sold: 0,
@@ -117,8 +117,8 @@ var shop = {
     displayName: "Laminator"
   },
   typingRobot: {
-    cost: 90000,
-    baseCost: 90000,
+    cost: 15000000000000000,
+    baseCost: 15000000000000000,
     costMultiplier: 1.15,
     owned: 0,
     sold: 0,
@@ -129,8 +129,8 @@ var shop = {
     displayName: "Typing Robot"
   },
   paperMill: {
-    cost: 3000000,
-    baseCost: 3000000,
+    cost: 10000000000000000000,
+    baseCost: 10000000000000000000,
     costMultiplier: 1.15,
     owned: 0,
     sold: 0,
