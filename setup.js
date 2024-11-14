@@ -230,6 +230,7 @@ function PageSwitch(topage) {
     case "shop":
       PageHide("settings");
       $("#pShopD").css("visibility","visible");
+      //add here
       break;
     case "settings":
       PageHide("shop");
