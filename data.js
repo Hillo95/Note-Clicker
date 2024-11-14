@@ -143,12 +143,11 @@ function ResetData() {
      power: 1,
      displayName: "Paper Mill"
    }
-};
   };
   shopLevel = 0;
   SaveData();
   uptime = 0;
-}
+};
 
 try {
   LoadData();
