@@ -23,126 +23,126 @@ function ResetData() {
     t: 0
   };
   shop = {
-    pencil: {
-      cost: 15,
-      baseCost: 15,
-      costMultiplier: 1.15,
-      owned: 0,
-      sold: 0,
-      ps: { main: 0.1, temp: 0, base: 0.1 },
-      psm: { main: 100, temp: 0, base: 100 },
-      pst: 0,
-      power: 1,
-      displayName: "Pencil"
-    },
-    pen: {
-      cost: 150,
-      baseCost: 150,
-      costMultiplier: 1.15,
-      owned: 0,
-      sold: 0,
-      ps: { main: 1, temp: 0, base: 1 },
-      psm: { main: 100, temp: 0, base: 100 },
-      pst: 0,
-      power: 1,
-      displayName: "Pen"
-    },
-    worker: {
-      cost: 4000,
-      baseCost: 4000,
-      costMultiplier: 1.15,
-      owned: 0,
-      sold: 0,
-      ps: { main: 14, temp: 0, base: 14 },
-      psm: { main: 100, temp: 0, base: 100 },
-      pst: 0,
-      power: 1,
-      displayName: "Worker"
-    },
-    typewriter: {
-      cost: 90000,
-      baseCost: 90000,
-      costMultiplier: 1.15,
-      owned: 0,
-      sold: 0,
-      ps: { main: 110, temp: 0, base: 110 },
-      psm: { main: 100, temp: 0, base: 100 },
-      pst: 0,
-      power: 1,
-      displayName: "Typewriter"
-    },
-    keyboard: {
-      cost: 3000000,
-      baseCost: 3000000,
-      costMultiplier: 1.15,
-      owned: 0,
-      sold: 0,
-      ps: { main: 900, temp: 0, base: 900 },
-      psm: { main: 100, temp: 0, base: 100 },
-      pst: 0,
-      power: 1,
-      displayName: "Keyboard"
-    },
-     printer: {
-     cost: 15,
-     baseCost: 15,
-     costMultiplier: 1.15,
-     owned: 0,
-     sold: 0,
-     ps: { main: 0.1, temp: 0, base: 0.1 },
-     psm: { main: 100, temp: 0, base: 100 },
-     pst: 0,
-     power: 1,
-     displayName: "Printer"
-   },
-   moneyPrinter: {
-     cost: 150,
-     baseCost: 150,
-     costMultiplier: 1.15,
-     owned: 0,
-     sold: 0,
-     ps: { main: 1, temp: 0, base: 1 },
-     psm: { main: 100, temp: 0, base: 100 },
-     pst: 0,
-     power: 1,
-     displayName: "Money Printer"
-   },
-   laminator: {
-     cost: 4000,
-     baseCost: 4000,
-     costMultiplier: 1.15,
-     owned: 0,
-     sold: 0,
-     ps: { main: 14, temp: 0, base: 14 },
-     psm: { main: 100, temp: 0, base: 100 },
-     pst: 0,
-     power: 1,
-     displayName: "Laminator"
-   },
-   typingRobot: {
-     cost: 90000,
-     baseCost: 90000,
-     costMultiplier: 1.15,
-     owned: 0,
-     sold: 0,
-     ps: { main: 110, temp: 0, base: 110 },
-     psm: { main: 100, temp: 0, base: 100 },
-     pst: 0,
-     power: 1,
-     displayName: "Typing Robot"
-   },
-   paperMill: {
-     cost: 3000000,
-     baseCost: 3000000,
-     costMultiplier: 1.15,
-     owned: 0,
-     sold: 0,
-     ps: { main: 900, temp: 0, base: 900 },
-     psm: { main: 100, temp: 0, base: 100 },
-     pst: 0,
-     power: 1,
-     displayName: "Paper Mill"
-   }
+  pencil: {
+    cost: 15,
+    baseCost: 15,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 0.1, temp: 0, base: 0.1 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Pencil"
+  },
+  pen: {
+    cost: 150,
+    baseCost: 150,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 1, temp: 0, base: 1 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Pen"
+  },
+  worker: {
+    cost: 4000,
+    baseCost: 4000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 14, temp: 0, base: 14 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Worker"
+  },
+  typewriter: {
+    cost: 90000,
+    baseCost: 90000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 110, temp: 0, base: 110 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Typewriter"
+  },
+  keyboard: {
+    cost: 3000000,
+    baseCost: 3000000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 900, temp: 0, base: 900 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Keyboard"
+  },
+  printer: {
+    cost: 9000000000,
+    baseCost: 9000000000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 0.1, temp: 0, base: 0.1 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Printer"
+  },
+  moneyPrinter: {
+    cost: 1000000000000,
+    baseCost: 150,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 1, temp: 0, base: 1 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Money Printer"
+  },
+  laminator: {
+    cost: 400000000000000,
+    baseCost: 400000000000000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 14, temp: 0, base: 14 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Laminator"
+  },
+  typingRobot: {
+    cost: 15000000000000000,
+    baseCost: 15000000000000000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 110, temp: 0, base: 110 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Typing Robot"
+  },
+  paperMill: {
+    cost: 10000000000000000000,
+    baseCost: 10000000000000000000,
+    costMultiplier: 1.15,
+    owned: 0,
+    sold: 0,
+    ps: { main: 900, temp: 0, base: 900 },
+    psm: { main: 100, temp: 0, base: 100 },
+    pst: 0,
+    power: 1,
+    displayName: "Paper Mill"
+  }
   };
   shopLevel = 0;
   SaveData();
