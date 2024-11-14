@@ -158,6 +158,7 @@ function UpdateAll() {
   n.m.main = n.m.base + n.m.temp;
 
   try {
+    console.log(shop.pencil.pst + shop.pen.pst + shop.worker.pst + shop.typewriter.pst + shop.keyboard.pst, + shop.printer.pst + shop.moneyPrinter.pst + shop.laminator.pst + shop.typingRobot.pst + shop.paperMill.pst);
     n.ps = (shop.pencil.pst + shop.pen.pst + shop.worker.pst + shop.typewriter.pst + shop.keyboard.pst, + shop.printer.pst + shop.moneyPrinter.pst + shop.laminator.pst + shop.typingRobot.pst + shop.paperMill.pst);
     console.log(n.ps + "1");
     n.ps = (Math.round(n.ps * 100)) / 100; //more fixing
@@ -252,13 +253,9 @@ PageSwitch("shop");
 // Main Loop
 
 function MainLoop() {
-  try {
-    n.c += n.ps * (n.psm.main / 100) * (n.m.main / 100);
-    n.t += n.ps * (n.psm.main / 100) * (n.m.main / 100);
-    console.log("nc update worked");
-  } catch {
-    console.log("failed nc update");
-  }
+  n.c += n.ps * (n.psm.main / 100) * (n.m.main / 100);
+  n.t += n.ps * (n.psm.main / 100) * (n.m.main / 100);
+  
   UpdateAll();
   uptime++;
   if (uptime % 10 == 0) { SaveData(); }
