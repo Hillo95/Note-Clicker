@@ -157,8 +157,12 @@ function UpdateAll() {
   n.pcm.main = n.pcm.base + n.pcm.temp;
   n.m.main = n.m.base + n.m.temp;
 
-  n.ps = (shop.pencil.pst + shop.pen.pst + shop.worker.pst + shop.typewriter.pst + shop.keyboard.pst, + shop.printer.pst + shop.moneyPrinter.pst + shop.laminator.pst + shop.typingRobot.pst + shop.paperMill.pst)
+  try {
+  n.ps = (shop.pencil.pst + shop.pen.pst + shop.worker.pst + shop.typewriter.pst + shop.keyboard.pst, + shop.printer.pst + shop.moneyPrinter.pst + shop.laminator.pst + shop.typingRobot.pst + shop.paperMill.pst);
   n.ps = (Math.round(n.ps * 100)) / 100; //more fixing
+  } catch {
+    console.log("n.ps aint working");
+  }
 
   try {
     $("#nCounterT").text(`Notes: ${abbr(Math.round(n.c))}`);
