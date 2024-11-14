@@ -150,6 +150,7 @@ function hideInfo() { //turn off for testing
 }
 
 function UpdateAll() {
+  console.log("start of updateAll");
   n.c = (Math.round(n.c * 100)) / 100;  //fixing js decimals
   n.t = (Math.round(n.t * 100)) / 100;
 
@@ -157,6 +158,7 @@ function UpdateAll() {
   n.pcm.main = n.pcm.base + n.pcm.temp;
   n.m.main = n.m.base + n.m.temp;
 
+  console.log("starting ps update");
   try {
     n.ps = (shop.pencil.pst + shop.pen.pst + shop.worker.pst + shop.typewriter.pst + shop.keyboard.pst, + shop.printer.pst + shop.moneyPrinter.pst + shop.laminator.pst + shop.typingRobot.pst + shop.paperMill.pst);
     console.log(n.ps + "1");
@@ -165,7 +167,9 @@ function UpdateAll() {
   } catch {
     console.log("n.ps aint working");
   }
-
+  console.log("end of updateAll");
+  
+  
   try {
     $("#nCounterT").text(`Notes: ${abbr(Math.round(n.c))}`);
     $("#nsCounterT").text(`Notes Per Second: ${abbr(n.ps)}`);
@@ -251,8 +255,13 @@ PageSwitch("shop");
 // Main Loop
 
 function MainLoop() {
-  n.c += n.ps * (n.psm.main / 100) * (n.m.main / 100);
-  n.t += n.ps * (n.psm.main / 100) * (n.m.main / 100);
+  try {
+    n.c += n.ps * (n.psm.main / 100) * (n.m.main / 100);
+    n.t += n.ps * (n.psm.main / 100) * (n.m.main / 100);
+    console.log("nc update worked");
+  } catch {
+    console.log("failed nc update");
+  }
   UpdateAll();
   uptime++;
   if (uptime % 10 == 0) { SaveData(); }
