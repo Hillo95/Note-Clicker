@@ -242,8 +242,8 @@ function PageSwitch(topage) {
     case "shop":
       PageHide("settings");
       $("#pShopD").css("visibility","visible");
-      if (shopLevel < 1) { $(".sRow2").css("filter","100%"); }
-      else { $(".sRow2").css("filter","0%"); }
+      if (shopLevel < 1) { $(".sRow2").css("filter","brightness(100%)"); }
+      else { $(".sRow2").css("filter","brightness(0%)"); }
       break;
     case "settings":
       PageHide("shop");
