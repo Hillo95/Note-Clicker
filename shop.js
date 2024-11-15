@@ -19,11 +19,13 @@ function BuyItem(i) {
 
 
 function setShopItemInfo(i) {  // Hide When Mouse Leave Sometime
-  $("#infoNameT").text(shop[i].displayName);
-  $("#infoStockT").text(`You Have ${shop[i].owned}`);
-  $("#infoPriceT").text(`Price: ${abbr(shop[i].cost)} Notes`);
-  $("#infoBuffT").text(`Each Gives ${abbr(shop[i].ps.main * (shop[i].psm.main / 100) * shop[i].power)} Notes Per Second`);
-  $("#infoTotalBuffT").text(`You Have ${shop[i].owned} Giving ${abbr(shop[i].pst)} Notes Per Second`);
+  if (shop[i].shopLevelReq <= shopLevel) {
+    $("#infoNameT").text(shop[i].displayName);
+    $("#infoStockT").text(`You Have ${shop[i].owned}`);
+    $("#infoPriceT").text(`Price: ${abbr(shop[i].cost)} Notes`);
+    $("#infoBuffT").text(`Each Gives ${abbr(shop[i].ps.main * (shop[i].psm.main / 100) * shop[i].power)} Notes Per Second`);
+    $("#infoTotalBuffT").text(`You Have ${shop[i].owned} Giving ${abbr(shop[i].pst)} Notes Per Second`);
 
-  $(".infoAllT").css("visibility", "visible");
+    $(".infoAllT").css("visibility", "visible");
+  }
 }
