@@ -31,7 +31,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Pencil",
-    shopLevelReq = 0
+    shopLevelReq: 0
   },
   pen: {
     cost: 150,
@@ -44,7 +44,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Pen",
-    shopLevelReq = 0
+    shopLevelReq: 0
   },
   worker: {
     cost: 4000,
@@ -57,7 +57,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Worker",
-    shopLevelReq = 0
+    shopLevelReq: 0
   },
   typewriter: {
     cost: 90000,
@@ -70,7 +70,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Typewriter",
-    shopLevelReq = 0
+    shopLevelReq: 0
   },
   keyboard: {
     cost: 3000000,
@@ -83,7 +83,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Keyboard",
-    shopLevelReq = 0
+    shopLevelReq: 0
   },
   printer: {
     cost: 9000000000,
@@ -96,7 +96,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Printer",
-    shopLevelReq = 1
+    shopLevelReq: 1
   },
   moneyPrinter: {
     cost: 1000000000000,
@@ -109,7 +109,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Money Printer",
-    shopLevelReq = 1
+    shopLevelReq: 1
   },
   laminator: {
     cost: 400000000000000,
@@ -122,7 +122,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Laminator",
-    shopLevelReq = 1
+    shopLevelReq: 1
   },
   typingRobot: {
     cost: 15000000000000000,
@@ -135,7 +135,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Typing Robot",
-    shopLevelReq = 1
+    shopLevelReq: 1
   },
   paperMill: {
     cost: 10000000000000000000,
@@ -148,7 +148,7 @@ var shop_template = {
     pst: 0,
     power: 1,
     displayName: "Paper Mill",
-    shopLevelReq = 1
+    shopLevelReq: 1
   }
 };
 
