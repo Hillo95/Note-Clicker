@@ -266,21 +266,25 @@ h6 {
 }
 
 #utClickD {
+  position: absolute;
   left: 100px;
   top: 0px;
 }
 
 #utPencilD {
+  position: absolute;
   left: 100px;
   top: 50px;
 }
 
 #utPenD {
+  position: absolute;
   left: 100px;
   top: 100px;
 }
 
 #utWorkerD {
+  position: absolute;
   left: 100px;
   top: 150px;
 }
