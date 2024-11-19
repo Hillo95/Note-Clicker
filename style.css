@@ -253,6 +253,9 @@ h6 {
 }
 
 /*upgrades*/
+#pUpgradesD {
+  white-space: nowrap;
+}
 
 .upgradeTabD {
   position: absolute;
@@ -260,7 +263,8 @@ h6 {
   left: 100px;
   min-height: 76px;
   max-height: 76px;
-  overflow: scroll;
+  overflow-x: scroll;
+  
 }
 
 .upgradeTabB {
