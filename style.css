@@ -265,6 +265,7 @@ h6 {
   max-height: 76px;
   overflow-x: scroll;
   width: 414px;
+  vertical-align: middle;
 }
 
 .upgradeTabB {
