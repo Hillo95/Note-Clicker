@@ -260,6 +260,11 @@ h6 {
   visibility: hidden;
 }
 
+.upgradeTabsB {
+  height: 40px;
+  width: 40px;
+}
+
 #utClickD {
   left: 0px;
   top: 0px;
