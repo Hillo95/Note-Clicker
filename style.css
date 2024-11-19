@@ -258,6 +258,8 @@ h6 {
   position: absolute;
   border: 3px solid #645b5b;
   left: 100px;
+  min-height: 80px;
+  max-height: 80px;
 }
 
 .upgradeTabB {
@@ -272,15 +274,15 @@ h6 {
 }
 
 #utPencilB {
-  top: 50px;
-}
-
-#utPenB {
   top: 100px;
 }
 
+#utPenB {
+  top: 200px;
+}
+
 #utWorkerB {
-  top: 150px;
+  top: 300px;
 }
 
 #utClickD {
@@ -288,13 +290,13 @@ h6 {
 }
 
 #utPencilD {
-  top: 50px;
-}
-
-#utPenD {
   top: 100px;
 }
 
+#utPenD {
+  top: 200px;
+}
+
 #utWorkerD {
-  top: 150px;
+  top: 300px;
 }
