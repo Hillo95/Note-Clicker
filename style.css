@@ -258,8 +258,8 @@ h6 {
   position: absolute;
   border: 3px solid #645b5b;
   left: 100px;
-  min-height: 80px;
-  max-height: 80px;
+  min-height: 76px;
+  max-height: 76px;
 }
 
 .upgradeTabB {
@@ -299,4 +299,9 @@ h6 {
 
 #utWorkerD {
   top: 300px;
+}
+
+.upgrades {
+  width: 60px;
+  height: 60px;
 }
