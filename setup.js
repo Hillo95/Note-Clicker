@@ -257,7 +257,7 @@ function PageSwitch(topage) {
     case "upgrades":
       PageHide("shop");
       PageHide("settings");
-      $("#pUpgradesD").css("visibility","visibile");
+      $("#pUpgradesD").css("visibility","visible");
     default:
       break;
   }
