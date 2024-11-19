@@ -232,6 +232,9 @@ function PageHide(tohide) {
     case "settings":
       $("#pSettingsD").css("visibility", "hidden");
       break;
+    case "upgrades":
+      $("#pUpgradesD").css("visibility", "hidden");
+      break;
     default:
       break;
   }
@@ -241,14 +244,20 @@ function PageSwitch(topage) {
   switch (topage) {
     case "shop":
       PageHide("settings");
+      PageHide("upgrades");
       $("#pShopD").css("visibility","visible");
       if (shopLevel < 1) { $(".sRow2").css("filter","brightness(0%)"); }
       else { $(".sRow2").css("filter","brightness(100%)"); }
       break;
     case "settings":
       PageHide("shop");
+      PageHide("upgrades");
       $("#pSettingsD").css("visibility","visible");
       break;
+    case "upgrades":
+      PageHide("shop");
+      PageHide("settings");
+      $("#pUpgradesD").css("visibility","visibile");
     default:
       break;
   }
