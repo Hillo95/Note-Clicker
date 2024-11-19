@@ -257,7 +257,6 @@ h6 {
 .upgradeTabD {
   position: absolute;
   border: 3px solid #645b5b;
-  visibility: hidden;
   left: 100px;
 }
 
