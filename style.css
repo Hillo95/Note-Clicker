@@ -261,8 +261,26 @@ h6 {
 }
 
 .upgradeTabB {
+  position: absolute;
+  left: 0px;
   height: 80px;
   width: 80px;
+}
+
+#utClickB {
+  top: 0px;
+}
+
+#utPencilB {
+  top: 50px;
+}
+
+#utPenB {
+  top: 100px;
+}
+
+#utWorkerB {
+  top: 150px;
 }
 
 #utClickD {
