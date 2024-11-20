@@ -259,7 +259,8 @@ h6 {
 
 .upgradeTabD {
   position: absolute;
-  border: 3px solid #645b5b;
+  /*border: 3px solid #645b5b;*/
+  border: none;
   left: 100px;
   min-height: 76px;
   max-height: 76px;
