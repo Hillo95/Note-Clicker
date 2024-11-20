@@ -156,6 +156,36 @@ var shop = shop_template;
 
 var shopLevel = 0;
 
+var up_template = {
+  
+  misc: {
+
+  },
+    
+  click: {
+    double_click: {
+      price: [200,700,2000,5000,10000,25000,60000],
+      levels: 7,
+      max_level: false,
+      unlocked: true,
+      power: 1
+    }
+  },
+
+  pencil: {
+
+  },
+
+  pen: {
+
+  },
+
+  worker: {
+
+  }
+  
+}
+
 
 function hideInfo() { //turn off for testing
   $(".infoAllT").css("visibility", "hidden");
