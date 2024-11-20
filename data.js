@@ -24,7 +24,6 @@ function ResetData() {
   };
   shop = shop_template;
   
-  };
   shopLevel = 0;
   SaveData();
   uptime = 0;
