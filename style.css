@@ -270,40 +270,48 @@ h6 {
 .upgradeTabB {
   position: absolute;
   left: 0px;
+}
+
+#utMiscB {
+  top: 0px;
+}
+
+#utClickB {
+  top: 100px;
+}
+
+#utPencilB {
+  top: 200px;
+}
+
+#utPenB {
+  top: 300px;
+}
+
+#utWorkerB {
+  top: 400px;
   height: 80px;
   width: 80px;
 }
 
-#utClickB {
+#utMiscD {
   top: 0px;
-}
-
-#utPencilB {
-  top: 100px;
-}
-
-#utPenB {
-  top: 200px;
-}
-
-#utWorkerB {
-  top: 300px;
 }
 
 #utClickD {
-  top: 0px;
-}
-
-#utPencilD {
   top: 100px;
 }
 
-#utPenD {
+#utPencilD {
   top: 200px;
 }
 
-#utWorkerD {
+#utPenD {
   top: 300px;
+}
+
+#utWorkerD {
+  top: 400px;
 }
 
 .upgrade {
