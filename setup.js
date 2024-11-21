@@ -173,8 +173,8 @@ var up_template = {
       id: 010,
       def: function() { //finish and fix    move the if to the upgrades.js
         if ( (this.unlocked) & (!this.max_level) & (n.c >= this.price[this.level]) ) {
-          n.c -= this.level;
-          n.psm.main += 100;
+          n.c -= this.price[this.level];
+          n.pcm.main += 100;
           this.level++;
           if (this.level == this.levels) {this.max_level = true;}
           alert('here');
