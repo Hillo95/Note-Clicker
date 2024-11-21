@@ -171,10 +171,14 @@ var up_template = {
       unlocked: true,
       power: 1,
       id: 010,
-      def: function() { //finish and fix
-       /* if ( !up.click.double_click.max_level & n.c >= up.click.double_click.price[up.click.double_click.level] ) {
+      def: function() { //finish and fix    move the if to the upgrades.js
+        if ( (this.unlocked) & (!this.max_level) & (n.c >= this.price[this.level]) ) {
+          n.c -= this.level;
           n.psm.main += 100;
-        }*/
+          this.level++;
+          if (this.level == this.levels) {this.max_level = true;}
+          UpdateAll();
+        }
       }
     }
   },
@@ -192,6 +196,8 @@ var up_template = {
   }
   
 }
+
+var up = up_template;
 
 
 function hideInfo() { //turn off for testing
