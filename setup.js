@@ -177,6 +177,7 @@ var up_template = {
           n.psm.main += 100;
           this.level++;
           if (this.level == this.levels) {this.max_level = true;}
+          alert('here');
           UpdateAll();
         }
       }
