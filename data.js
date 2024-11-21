@@ -1,14 +1,14 @@
 function SaveData() {
   localStorage.setItem("n",JSON.stringify(n));
   localStorage.setItem("shop",JSON.stringify(shop));
-  localStorage.setItem("shopLevel",toString(shopLevel));
+  localStorage.setItem("shopLevel",JSON.stringify(shopLevel));
   localStorage.setItem("uptime",toString(uptime));
 }
 
 function LoadData() {
   n = JSON.parse(localStorage.getItem("n"));
   shop = JSON.parse(localStorage.getItem("shop"));
-  shopLevel = Number(localStorage.getItem("shopLevel"));
+  shopLevel = JSON.parse(localStorage.getItem("shopLevel"));
   uptime = Number(localStorage.getItem("uptime"));
 }
 
