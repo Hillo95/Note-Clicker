@@ -165,10 +165,17 @@ var up_template = {
   click: {
     double_click: {
       price: [200,700,2000,5000,10000,25000,60000],
+      level: 0,
       levels: 7,
       max_level: false,
       unlocked: true,
-      power: 1
+      power: 1,
+      id: 010,
+      def: function() { //finish and fix
+       /* if ( !up.click.double_click.max_level & n.c >= up.click.double_click.price[up.click.double_click.level] ) {
+          n.psm.main += 100;
+        }*/
+      }
     }
   },
 
