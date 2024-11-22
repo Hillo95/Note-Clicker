@@ -173,7 +173,7 @@ var up_template = {
       id: 010,
       def: function() { //finish and fix    move the if to the upgrades.js
         n.c -= this.price[this.level];
-        n.pcm.base += 100;
+        n.pcm.base += 100 * (2 ** this.level);
         this.level++;
         if (this.level == this.levels) {this.max_level = true;}
         UpdateAll();
