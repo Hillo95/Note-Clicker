@@ -284,6 +284,7 @@ function PageHide(tohide) {
 function PageSwitch(topage) {
   switch (topage) {
     case "shop":
+      page = "shop";
       PageHide("settings");
       PageHide("upgrades");
       $("#pShopD").css("visibility","visible");
@@ -291,11 +292,13 @@ function PageSwitch(topage) {
       else { $(".sRow2").css("filter","brightness(100%)"); }
       break;
     case "settings":
+      page = "settings";
       PageHide("shop");
       PageHide("upgrades");
       $("#pSettingsD").css("visibility","visible");
       break;
     case "upgrades":
+      page = "upgrades";
       PageHide("shop");
       PageHide("settings");
       $("#pUpgradesD").css("visibility","visible");
