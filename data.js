@@ -3,7 +3,7 @@ function SaveData() {
   localStorage.setItem("shop",JSON.stringify(shop));
   localStorage.setItem("shopLevel",JSON.stringify(shopLevel));
   localStorage.setItem("uptime",JSON.stringify(uptime));
-  localStorage.setItem("up",JSON.stringify(up));
+  localStorage.setItem("up",JSON.stringify(up));   /*!!!ALWAYS USE STRINGIFY!!!*/
 }
 
 function LoadData() {
