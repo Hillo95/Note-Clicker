@@ -177,7 +177,6 @@ var up_template = {
           n.pcm.base += 100;
           this.level++;
           if (this.level == this.levels) {this.max_level = true;}
-          alert('here');
           UpdateAll();
         }
       }
@@ -233,7 +232,7 @@ function NoteOnClick() {
   //alert("before updateall" + n.c);
   UpdateAll();
   //alert("after updateall" + n.c);
-  $("#tNoteGainPart").text(`+${abbr(n.pc)}`);
+  $("#tNoteGainPart").text(`+${abbr(n.pc * (n.pcm.main / 100) * (n.m.main / 100))}`);
   $("#tNoteGainPart").css({
     left: `${Math.floor(Math.random() * 361) + 5}px`,
     top: `${Math.floor(Math.random() * 394) + 5}px`,
