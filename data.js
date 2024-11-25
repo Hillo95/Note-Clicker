@@ -11,7 +11,7 @@ function LoadData() {
   shop = JSON.parse(localStorage.getItem("shop"));
   shopLevel = JSON.parse(localStorage.getItem("shopLevel"));
   uptime = JSON.parse(localStorage.getItem("uptime"));
-  up = JSON.parge(localStorage.getItem("up"));
+  up = JSON.parse(localStorage.getItem("up"));
 }
 
 function ResetData() {
