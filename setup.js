@@ -178,6 +178,22 @@ var up_template = {
         this.level++;
         if (this.level == this.levels) {this.max_level = true;}
         UpdateAll();
+      },
+      triple_click: {
+      price: [3000000,11000000,44000000,200000000, 500000000],
+      level: 0,
+      levels: 5,
+      max_level: false,
+      unlocked: true,
+      power: 1,
+      id: 011,
+      display_name: 'Triple Click',
+      def: function() { //finish and fix    move the if to the upgrades.js
+        n.c -= this.price[this.level];
+        n.pcm.base += 100 * (2 ** this.level); //change this
+        this.level++;
+        if (this.level == this.levels) {this.max_level = true;}
+        UpdateAll();
       }
     }
   },
