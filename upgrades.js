@@ -4,7 +4,8 @@ function buyUpgrade(section,toBuy) {
   }
 }
 
-function setUpgradeInfo(section, i) {  // Hide When Mouse Leave Sometime
+function setUpgradeInfo(section,i) {  // Hide When Mouse Leave Sometime
+  alert('yo');
   if (up[section][i].unlocked) {
     $("#infoNameT").text(up[section][i].displayName);
     $("#infoStockT").text(up[section][i].max_level ? 'Max Level' : `Level ${up[section][i].level} Out Of ${up[section][i].levels}`);
