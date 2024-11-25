@@ -3,3 +3,15 @@ function buyUpgrade(section,toBuy) {
     up[section][toBuy].def();
   }
 }
+
+function setUpgradeInfo(section, i) {  // Hide When Mouse Leave Sometime
+  if (up[section][i].unlocked) {
+    $("#infoNameT").text(up[section][i].displayName);
+    $("#infoStockT").text(up[section][i].max_level ? 'Max Level' : `Level ${up[section][i].level} Out Of ${up[section][i].levels}`);
+    $("#infoPriceT").text(`Price: ${abbr(up[section][i].price[up[section][i].level])} Notes`);
+    $("#infoBuffT").text('Doubles Your Notes Per Click');
+    $("#infoTotalBuffT").text(' ');
+
+    $(".infoAllT").css("visibility", "visible");
+  }
+}
