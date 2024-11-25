@@ -171,6 +171,7 @@ var up_template = {
       unlocked: true,
       power: 1,
       id: 010,
+      displayname: 'Double Click',
       def: function() { //finish and fix    move the if to the upgrades.js
         n.c -= this.price[this.level];
         n.pcm.base += 100 * (2 ** this.level);
