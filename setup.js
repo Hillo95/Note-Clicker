@@ -200,7 +200,68 @@ var up_template = {
         if (this.level == this.levels) {this.max_level = true;}
         UpdateAll();
       }
-    }
+    },
+    quadruple_click: {
+      price: [1000000000,3000000000,5000000000],
+      level: 0,
+      levels: 3,
+      max_level: false,
+      unlocked: true,
+      power: 1,
+      id: 012,
+      display_name: 'Quadruple Click',
+      tiered: true,
+      desc: "Quadruples your notes per click",
+      def: function() {
+        n.c -= this.price[this.level];
+        n.pcm.base += 200 * (2 ** this.level); //change this
+        this.level++;
+        if (this.level == this.levels) {this.max_level = true;}
+        UpdateAll();
+      }
+    },
+    mega_click: {
+      price: [10^12,10^13,10^14,10^15,10^16,10^17,10^18,10^19,10^20,10^21],
+      level: 0,
+      levels: 10,
+      max_level: false,
+      unlocked: true,
+      power: 1,
+      id: 012,
+      display_name: 'Mega Click',
+      tiered: true,
+      desc: "Drastically increases your notes per click",
+      def: function() {
+        n.c -= this.price[this.level];
+        n.pcm.base += 200 * (2 ** this.level); //change this
+        this.level++;
+        if (this.level == this.levels) {this.max_level = true;}
+        UpdateAll();
+      }
+    },
+    powered_click: {
+      price: [
+        10^12,10.25^12,10.5^12,10.75^12,10.
+      ],
+      level: 0,
+      levels: 40,
+      max_level: false,
+      unlocked: true,
+      power: 1,
+      id: 012,
+      display_name: 'Powered Click',
+      tiered: true,
+      desc: "Increases Your Notes Per Second",
+      stages: 4,
+      stage: 1,
+      def: function() {
+        n.c -= this.price[this.level];
+        n.pcm.base += 200 * (2 ** this.level); //change this
+        this.level++;
+        if (this.level == this.levels) {this.max_level = true;}
+        UpdateAll();
+      }
+    },
   },
 
   pencil: {
