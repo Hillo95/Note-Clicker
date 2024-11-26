@@ -173,6 +173,7 @@ var up_template = {
       id: 010,
       display_name: 'Double Click',
       tiered: true,
+      desc: "Double your notes per click",
       def: function() {
         n.c -= this.price[this.level];
         n.pcm.base += 100 * (2 ** this.level);
@@ -191,6 +192,7 @@ var up_template = {
       id: 011,
       display_name: 'Triple Click',
       tiered: true,
+      desc: "Triples your notes per click",
       def: function() {
         n.c -= this.price[this.level];
         n.pcm.base += 200 * (2 ** this.level); //change this
