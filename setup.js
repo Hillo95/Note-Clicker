@@ -214,7 +214,7 @@ var up_template = {
       desc: "Quadruples your notes per click",
       def: function() {
         n.c -= this.price[this.level];
-        n.pcm.base += 200 * (2 ** this.level); //change this
+        n.pcm.base += 400 * (4 ** this.level); //change this
         this.level++;
         if (this.level == this.levels) {this.max_level = true;}
         UpdateAll();
@@ -227,13 +227,13 @@ var up_template = {
       max_level: false,
       unlocked: true,
       power: 1,
-      id: 012,
+      id: 013,
       display_name: 'Mega Click',
       tiered: true,
       desc: "Drastically increases your notes per click",
       def: function() {
         n.c -= this.price[this.level];
-        n.pcm.base += 200 * (2 ** this.level); //change this
+        n.pcm.base += 1000 * (10 ** this.level); //change this
         this.level++;
         if (this.level == this.levels) {this.max_level = true;}
         UpdateAll();
@@ -241,22 +241,25 @@ var up_template = {
     },
     powered_click: {
       price: [
-        10^12,10.25^12,10.5^12,10.75^12,10.
+        1*10**3,1.25*10**3,1.5*10**3,1.75*10**3,2*10**3,2.25*10**3,2.5*10**3,2.75*10**3,3*10**3,3.25*10**3,
+        1*10**6,1.25*10**6,1.5*10**6,1.75*10**6,2*10**6,2.25*10**6,2.5*10**6,2.75*10**6,3*10**6,3.25*10**6,
+        1*10**9,1.25*10**9,1.5*10**9,1.75*10**9,2*10**9,2.25*10**9,2.5*10**9,2.75*10**9,3*10**9,3.25*10**9,
+        1*10**12,1.25*10**12,1.5*10**12,1.75*10**12,2*10**12,2.25*10**12,2.5*10**12,2.75*10**12,3*10**12,3.25*10**12
       ],
       level: 0,
       levels: 40,
       max_level: false,
       unlocked: true,
       power: 1,
-      id: 012,
+      id: 014,
       display_name: 'Powered Click',
       tiered: true,
-      desc: "Increases Your Notes Per Second",
+      desc: "Increases Your Notes Per Click",
       stages: 4,
       stage: 1,
       def: function() {
         n.c -= this.price[this.level];
-        n.pcm.base += 200 * (2 ** this.level); //change this
+        n.pcm.base += 10 ** this.stage; //change this
         this.level++;
         if (this.level == this.levels) {this.max_level = true;}
         UpdateAll();
