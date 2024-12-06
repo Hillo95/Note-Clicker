@@ -18,7 +18,7 @@ function ResetData() {
   n = {
     c: 0,
     ps: 0,
-    pc: 1,
+    pc: 1000,
     psm: { main: 100, temp: 0, base: 100 },
     pcm: { main: 100, temp: 0, base: 100 },
     m: { main: 100, temp: 0, base: 100 },
